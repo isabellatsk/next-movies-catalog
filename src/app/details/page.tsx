@@ -26,7 +26,6 @@ interface MovieDetailProps {
 }
 
 export default function SeeDetails() {
-  "use client";
   const router = useRouter(); // instância do roteador para navegação (ex: voltar página)
   const searchParams = useSearchParams(); // hook para ler query strings atuais
 
