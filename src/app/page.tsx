@@ -103,7 +103,7 @@ export default function Home() {
       // limpa a mensagem após 3 segundos
     }
   }
-
+  console.log("oi isa");
   return (
     <main className="h-screen flex flex-col items-center mt-14">
       {/* container principal da página, ocupa altura total, usa flex em coluna e centraliza itens */}
