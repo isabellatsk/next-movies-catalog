@@ -1,11 +1,6 @@
-import type { Metadata } from "next";
-// importa o tipo metadata do next para tipar os metadados da página
-
-import { Geist, Geist_Mono } from "next/font/google";
-// importa as fontes geist e geist_mono do google fonts via next/font/google
-
-import "./globals.css";
-// importa o arquivo global de estilos css
+import type { Metadata } from "next"; // importa o tipo metadata do next para tipar os metadados da página
+import { Geist, Geist_Mono } from "next/font/google"; // importa as fontes geist e geist_mono do google fonts via next/font/google
+import "./globals.css"; // importa o arquivo global de estilos css
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -38,21 +33,17 @@ export default function RootLayout({
 
   return (
     <html lang="en">
-      {/* define a tag html com atributo lang para acessibilidade e SEO */}
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
         {/* tag body com classes css:
           - geistSans.variable e geistMono.variable: adiciona as variáveis css das fontes para uso global
           - antialiased: para suavizar a renderização das fontes */}
-
         <header className="bg-red-900 w-full py-3 px-3 text-center text-2xl text-white">
           <h2>CATÁLOGO DE FILMES</h2>
-        </header>
+        </header>{" "}
         {/* header fixo no topo com fundo azul escuro, texto branco centralizado, tamanho 2xl */}
-
-        {children}
-        {/* renderiza o conteúdo filho passado para o layout */}
+        {children} {/* renderiza o conteúdo filho passado para o layout */}
       </body>
     </html>
   );
