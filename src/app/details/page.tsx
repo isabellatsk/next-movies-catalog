@@ -1,5 +1,8 @@
 "use client"; // Indica que este componente é um componente cliente (React Client Component) no Next.js 13+
 
+//
+import { Suspense } from "react";
+
 import { useSearchParams, useRouter } from "next/navigation";
 // useSearchParams: hook para acessar os parâmetros da query string no app router
 // useRouter: hook para navegação (ex: voltar página)
@@ -25,7 +28,7 @@ interface MovieDetailProps {
   Poster: string;
 }
 
-export default function SeeDetails() {
+function SeeDetailsContent() {
   const router = useRouter(); // instância do roteador para navegação (ex: voltar página)
   const searchParams = useSearchParams(); // hook para ler query strings atuais
 
@@ -117,5 +120,13 @@ export default function SeeDetails() {
         </div>
       </div>
     </main>
+  );
+}
+
+export default function SeeDetails() {
+  return (
+    <Suspense fallback={<div>Carregando...</div>}>
+      <SeeDetailsContent />
+    </Suspense>
   );
 }

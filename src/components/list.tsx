@@ -1,4 +1,3 @@
-"use client";
 import Movieposter from "@/components/poster"; // importa o componente Movieposter para exibir o pôster dos filmes
 import Link from "next/link"; // importa o componente Link do next para navegação entre páginas
 import { MoviesProps } from "@/app/page";
