@@ -28,7 +28,7 @@ export default function FormSearchMovies({
     }
 
     // monta a url da api omdb com a chave e o nome do filme pesquisado
-    const url = `http://www.omdbapi.com/?apikey=58e8b40e&s=${nameMovie}`;
+    const url = `https://www.omdbapi.com/?apikey=58e8b40e&s=${nameMovie}`;
 
     try {
       const response = await fetch(url); // faz a requisição para a api
@@ -52,6 +52,7 @@ export default function FormSearchMovies({
 
       console.error(err); // loga o erro no console para debug
       setErro("Erro ao buscar filmes"); // avisa o usuário que ocorreu um erro
+
       setMovies([]); // limpa lista de filmes para não mostrar resultados errados
       setTimeout(() => setErro(""), 3000); // limpa a mensagem após 3 segundos
     }
