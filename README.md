@@ -17,7 +17,7 @@ Este é um projeto de **mini catálogo de filmes** desenvolvido com **Next.js** 
 - [React](https://reactjs.org/) - Biblioteca para construção de interfaces.
 - [TypeScript](https://www.typescriptlang.org/) - Tipagem estática para maior segurança no código.
 - [Tailwind CSS](https://tailwindcss.com/) - Biblioteca de estilização utilitária.
-- APIs externas de filmes (como [OMDb API](http://www.omdbapi.com/) ou similar).
+- APIs externas de filmes ([OMDb API](http://www.omdbapi.com/)).
 
 ## como rodar
 
